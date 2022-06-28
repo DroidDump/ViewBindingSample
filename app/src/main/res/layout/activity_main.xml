@@ -20,15 +20,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment"
+        android:id="@+id/fragmentInflate"
         android:name="com.example.viewbindingsample.InflateFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentBind"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewActivity"
+        tools:layout="@layout/fragment_blank" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentBind"
+        android:name="com.example.viewbindingsample.BindFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewActivity"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentInflate"
         tools:layout="@layout/fragment_blank" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
